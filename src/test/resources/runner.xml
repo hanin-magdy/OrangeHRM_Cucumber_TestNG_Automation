@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testing.org/testng-1.0.dtd">
+<suite name="Login Suite">
+    <test name ="Login Tests">
+        <classes>
+            <class name="testRunners.LoginRunner"/>
+            <class name="testRunners.SmokeRunner"/>
+        </classes>
+    </test>
+</suite>
+
+
