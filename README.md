@@ -1,38 +1,41 @@
-## OrangeHRM Cucumber TestNG Automation Framework
+## OrangeHRM Cucumber TestNG Automation
 
-This repository contains an automated test framework built using Java, Selenium WebDriver, Cucumber (BDD), TestNG, and Maven.
+Automated UI tests for the OrangeHRM demo application, built with Java, Selenium WebDriver, Cucumber (BDD), TestNG, and Maven.
 
- Project Overview
-The main goal of this framework is to automate functional end-to-end scenarios for the OrangeHRM application using Behavior-Driven Development (BDD).
+## Project Overview
+
+The project automates the login module of the OrangeHRM demo site using Behavior-Driven Development (BDD): 3 Gherkin scenarios with example data, 2 of them tagged @smoke, executed through TestNG runner classes.
 
 ## Key Technologies & Tools
 
-* Language: Java
+* Language: Java (JDK 17+)
 * Automation Tool: Selenium WebDriver
 * BDD Framework: Cucumber
 * Testing Framework: TestNG
 * Build Tool: Maven
-* Design Pattern: Page Object Model (POM)
-  
 
-##  Project Structure
+## Project Structure
 
 ```text
-src/
- ├── main/java/Pages/          # Page Object classes containing locators & actions
- └── test/
-     ├── java/
-     │   ├── steps/           # Step Definitions mapping Gherkin to Java code
-     │   └── testRunners/     # TestNG Test Runners (@CucumberOptions)
-     └── resources/
-         ├── Features/        # Gherkin feature files (.feature)
-         └── runner.xml       # TestNG XML suite runner
+src/test/
+ ├── java/
+ │   ├── steps/           # Step definitions mapping Gherkin to Java code
+ │   └── testRunners/     # TestNG runners (@CucumberOptions): Login, Smoke, Feature
+ └── resources/
+     ├── Features/        # 3 Gherkin feature files for the login module
+     └── runner.xml       # TestNG suite
 ```
+
+## Test Coverage
+
+* Module: Login
+* 3 scenarios, 2 of them tagged @smoke
+* Runners: LoginRunner, SmokeRunner, FeatureRunner
 
 ## How to Run Tests ?
 
-​1.Open the project in IntelliJ IDEA.
+1.Open the project in IntelliJ IDEA.
 
-​2.Run any Test Runner class located under src/test/java/testRunners/ (e.g., SmokeRunner.java or LoginRunner.java).
+2.Run any Test Runner class located under src/test/java/testRunners/ (e.g., SmokeRunner.java or LoginRunner.java).
 
-​3.Alternatively, right-click testng.xml or runner.xml and click Run.        
+3.Alternatively, right-click runner.xml or testng.xml and click Run.
